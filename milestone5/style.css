@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
     margin: 0;
     padding: 0;
     background-color: #222;
@@ -235,10 +236,23 @@ html, body {
     .wrapper {
         grid-template-columns: minmax(0px, 1fr) repeat(6, minmax(0, 128px)) minmax(0px, 1fr);
     }
+
+    #latest-designs {
+        grid-column: 5 / -1;
+        width: 100%;
+        height: auto;
+    }
 }
 
 @media only screen and (max-width: 768px) {
     .wrapper {
         grid-template-columns: repeat(6, minmax(0, 128px));
     }
+
+    #latest-designs {
+        grid-column: 5 / -1;
+        width: 100%;
+        height: auto;
+    }
+
 }
