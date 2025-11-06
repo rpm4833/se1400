@@ -24,22 +24,29 @@ body {
     grid-template-rows: auto;
 }
 
-.navbar {
-    grid-column: 2 / -2;
+#logo {
+    grid-column: 2 / 4;
+    grid-row: 1;
+    align-self: center;
+    justify-self: center;
+}
+
+nav {
+    grid-column: 4 / -2;
     grid-row: 1;
 }
 
-.navbar ul {
+nav ul {
     display: flex;
     list-style-type: none;
     flex-flow: row nowrap;
 }
 
-.navbar ul li {
+nav ul li {
     width: 100%;
 }
 
-.navbar a {
+nav a {
     color: #a8a8a8;
     text-decoration: none;
     font-size: 20px;
@@ -48,11 +55,11 @@ body {
     text-align: center;
 }
 
-.navbar a:hover {
+nav a:hover {
     background-color: #5d5d5d;
 }
 
-.navbar a.dropdown::after {
+nav a.dropdown::after {
     content: "▼";
     margin-left: 6px;
     font-size: 15px;
@@ -98,6 +105,8 @@ aside {
     grid-row: 4;
     background-color: #2d2d2d;
     max-width: 452px;
+    width: auto;
+    height: auto;
     display: grid;
     grid-template-columns: 26px 1fr 2fr 1fr 26px;
     grid-template-rows: repeat(9, auto);
@@ -110,15 +119,23 @@ aside h1 {
     font-weight: lighter;
     grid-column: 1 / -1;
     grid-row: 1;
+    height: 43px;
     text-align: center;
     background-color: #3D3D3D;
     margin: 0px;
     padding-top: 10px;
     padding-bottom: 10px;
-    display: flex;
-    justify-content: center;
+    text-align: center;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
+}
+
+aside span {
+    grid-column: 2;
+    background-color: #3D3D3D;
+    margin: 0px;
+    margin-top: 1rem;
+    border-top-left-radius: 10px;
 }
 
 aside h5 {
@@ -131,7 +148,7 @@ aside h5 {
     align-items: center;
     justify-content: center;
 }
- 
+
 aside p {
     grid-column: 4;
     color: #A8A8A8;
@@ -153,6 +170,10 @@ aside img {
     margin-right: auto;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
+    max-width: 400px;
+    max-height: 254px;
+    height: auto;
+    width: auto;
 }
 
 #final-design {
@@ -161,7 +182,8 @@ aside img {
 
 #graybar2 {
     grid-row: 5;
-    margin-top: 20px
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .contact {
@@ -180,12 +202,14 @@ aside img {
     grid-column: 1;
     grid-row: 1;
     color: #fff;
+    padding: 0px;
 }
 
 #inspirations {
     grid-column: 2;
     grid-row: 1;
     color: #fff;
+    padding: 0px;
 }
 
 .contact form label {
@@ -198,7 +222,7 @@ aside img {
     grid-column: 4;
     grid-row: 1;
     background-color: #D9D9D9;
-    margin-top: 24px;
+    padding: 0px;
 }
 
 #contact,
@@ -229,7 +253,7 @@ footer {
     }
 
     aside {
-        grid-column: 5 / -1;
+        grid-column: 5 / -2;
         width: 100%;
         height: auto;
     }
@@ -240,10 +264,87 @@ footer {
         grid-template-columns: repeat(6, minmax(0, 128px));
     }
 
-    aside {
-        grid-column: 5 / -1;
-        width: 100%;
-        height: auto;
+    #logo {
+        grid-column: 1 / -1;
+        grid-row: 1;
+        justify-self: center;
+        margin-top: 10px;
+        margin-bottom: 10px;
     }
 
+    nav {
+        grid-column: 1 / -1;
+        grid-row: 2;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    nav ul {
+        padding: 0px;
+    }
+
+    #orangebar {
+        grid-row: 3;
+        padding-bottom: 0px;
+    }
+
+    #graybar1 {
+        display: none;
+    }
+
+    #graybar2 {
+        grid-column: 1 / -1;
+        grid-row: 6;
+        margin-top: 10px;
+    }
+
+    #graybar3 {
+        grid-column: 1 / -1;
+        grid-row: 8;
+        margin-top: 10px;
+    }
+
+    .main-content {
+        grid-column: 1 / -1;
+        margin: 0px;
+        padding: 20px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+
+    .contact {
+        grid-column: 1 / -1;
+        grid-row: 7;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, minmax(0, auto));
+        padding: 0px;
+        text-align: center;
+    }
+    .contact #contact {
+        grid-column: 1;
+        grid-row: 1;
+        padding-left: 0px;
+    }
+
+    .contact #inspirations {
+        grid-column: 1;
+        grid-row: 2;
+        padding-left: 0px;
+    }
+
+    .contact form textarea {
+        width: 75%;
+        height: 75%;
+        justify-content: center;
+    }
+
+    aside {
+        display: none;
+    }
+
+    footer {
+        grid-column: 1 / -1;
+        grid-row: 9;
+    }
 }
