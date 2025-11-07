@@ -29,6 +29,8 @@ body {
     grid-row: 1;
     align-self: center;
     justify-self: center;
+    max-height: 50px;
+    height: auto;
 }
 
 nav {
@@ -55,15 +57,12 @@ nav a {
     text-align: center;
 }
 
-nav a:hover {
-    background-color: #5d5d5d;
+nav a:last-child {
+    padding-right: 1rem;
 }
 
-nav a.dropdown::after {
-    content: "▼";
-    margin-left: 6px;
-    font-size: 15px;
-    color: #a8a8a8;
+nav a:hover {
+    background-color: #5d5d5d;
 }
 
 #orangebar {
@@ -99,7 +98,7 @@ nav a.dropdown::after {
 }
 
 aside {
-    margin: none;
+    margin: 0px;
     margin-top: 27px;
     grid-column: 5 / -2;
     grid-row: 4;
@@ -109,7 +108,8 @@ aside {
     height: auto;
     display: grid;
     grid-template-columns: 26px 1fr 2fr 1fr 26px;
-    grid-template-rows: repeat(9, auto);
+    grid-auto-rows: min-content;
+    align-items: start;
     border-radius: 20px;
 }
 
@@ -136,6 +136,7 @@ aside span {
     margin: 0px;
     margin-top: 1rem;
     border-top-left-radius: 10px;
+    height: 16px;
 }
 
 aside h5 {
@@ -147,6 +148,8 @@ aside h5 {
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 16px;
+    white-space: nowrap;
 }
 
 aside p {
@@ -161,6 +164,7 @@ aside p {
     padding-right: 10px;
     font-size: 8px;
     border-top-right-radius: 10px;
+    height: 16px;
 }
 
 aside img {
@@ -190,8 +194,10 @@ aside img {
     grid-column: 2 / -2;
     grid-row: 6;
     display: grid;
-    grid-template-columns: repeat(4, auto);
+    grid-template-columns: repeat(3, auto);
     grid-template-rows: auto;
+    align-items: center;
+    text-align: center;
 }
 
 .contact a {
@@ -206,23 +212,38 @@ aside img {
 }
 
 #inspirations {
-    grid-column: 2;
-    grid-row: 1;
-    color: #fff;
-    padding: 0px;
-}
-
-.contact form label {
     grid-column: 3;
     grid-row: 1;
     color: #fff;
+    padding: 0px;
 }
 
 #feedback form textarea {
-    grid-column: 4;
+    grid-column: 2;
     grid-row: 1;
     background-color: #D9D9D9;
     padding: 0px;
+    justify-content: center;
+
+}
+
+textarea {
+    border: 10px #FA9549 outset;
+    border-radius: 10px;
+    background-color: #2D2D2D;
+    color: #FFF;
+    font-family: 'Sarabun', sans-serif;
+    text-decoration-color: #FFF;
+}
+
+textarea:focus {
+    outline: none;
+    border: 10px #FA9549 inset;
+    border-radius: 10px;
+}
+
+::placeholder {
+    color: #D9D9D9;
 }
 
 #contact,
@@ -254,9 +275,19 @@ footer {
 
     aside {
         grid-column: 5 / -2;
-        width: 100%;
-        height: auto;
+        grid-template-columns: 10px 83px 166px 83px 10px;
+        width: 352px;
+        height: 950px;
     }
+
+    aside img {
+        width: 332px;
+    }
+    
+    textarea {
+        width: 80%;
+    }
+
 }
 
 @media only screen and (max-width: 768px) {
@@ -321,6 +352,7 @@ footer {
         padding: 0px;
         text-align: center;
     }
+
     .contact #contact {
         grid-column: 1;
         grid-row: 1;
