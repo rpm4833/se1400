@@ -130,7 +130,7 @@ nav a:hover::after {
     margin-bottom: 20px;
 }
 
-#quote {
+.quote {
     color: #A8A8A8;
     font-size: smaller;
     text-align: right;
