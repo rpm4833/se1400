@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Satisfactory Designs | Designs</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="design.js"></script>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/designs.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
@@ -20,45 +20,93 @@
                 <li><a href="downloads.html">Downloads</a></li>
             </ul>
         </nav>
+        <section>
+            <h1>Design Selector</h1>
+            <p>
+                Use this selector by first selecting what Space Elevator phase the product is in and then selecting the product.
+            </p>
+            <div class="space-elevator-selector">
+                <input type="radio" name="phase" id="phase1" checked>
+                <label for="phase1">Phase 1</label>
 
+                <input type="radio" name="phase" id="phase2">
+                <label for="phase2">Phase 2</label>
+
+                <input type="radio" name="phase" id="phase3">
+                <label for="phase3">Phase 3</label>
+
+                <input type="radio" name="phase" id="phase4">
+                <label for="phase4">Phase 4</label>
+
+                <input type="radio" name="phase" id="phase5">
+                <label for="phase5">Phase 5</label>
+
+                <div class="selector-bg"></div>
+            </div>
+
+            <div class="product-selector-1">
+                <input type="radio" name="product" id="p1" value="iron-plate" checked>
+                <label for="p1">
+                    <img src="icons/iron-plate.png">
+                    <span class="label-text">Iron Plate</span>
+                </label>
+
+                <input type="radio" name="product" id="p2" value="iron-rod">
+                <label for="p2">
+                    <img src="icons/iron-rod.png">
+                    <span class="label-text">Iron Rod</span>
+                </label>
+
+                <input type="radio" name="product" id="p3" value="screws">
+                <label for="p3">
+                    <img src="icons/screws.png">
+                    <span class="label-text">Screws</span>
+                </label>
+
+                <input type="radio" name="product" id="p4" value="reinforced">
+                <label for="p4">
+                    <img src="icons/reinforced.png">
+                    <span class="label-text">Reinforced Iron Plate</span>
+                </label>
+
+                <input type="radio" name="product" id="p5" value="rotor">
+                <label for="p5">
+                    <img src="icons/rotor.png">
+                    <span class="label-text">Rotor</span>
+                </label>
+
+                <input type="radio" name="product" id="p6" value="smart-plating">
+                <label for="p6">
+                    <img src="icons/smart-plating.png">
+                    <span class="label-text">Smart Plating</span>
+                </label>
+
+                <input type="radio" name="product" id="p7" value="wire">
+                <label for="p7">
+                    <img src="icons/wire.png">
+                    <span class="label-text">Wire</span>
+                </label>
+
+                <input type="radio" name="product" id="p8" value="cable">
+                <label for="p8">
+                    <img src="icons/cable.png">
+                    <span class="label-text">Cable</span>
+                </label>
+
+                <input type="radio" name="product" id="p9" value="concrete">
+                <label for="p9">
+                    <img src="icons/concrete.png">
+                    <span class="label-text">Concrete</span>
+                </label>
+
+                <div class="vert-selector-bg"></div>
+            </div>
+
+            <img src="designs/iron-plate-design.png" alt="Design for selected product." id="design-img" height="500" width="800">
+
+        </section>
         
-    <form id="space-elevator">
-        <div id="phase-selector">
-            <button type="button" data-phase="1">Phase 1</button>
-            <button type="button" data-phase="2">Phase 2</button>
-            <button type="button" data-phase="3">Phase 3</button>
-            <button type="button" data-phase="4">Phase 4</button>
-            <button type="button" data-phase="5">Phase 5</button>
-        </div>
-
-    <div id="phase1">
-        <label>Products</label>
-        <select id="phase1-product">
-            <option value="iron-plate">Iron Plate</option>
-            <option value="iron-rod">Iron Rod</option>
-            <option value="screws">Screws</option>
-            <option value="reinforced-plate">Reinforced Plate</option>
-            <option value="rotor">Rotor</option>
-            <option value="smart-plating">Smart Plating</option>
-        </select>
-    </div>
-
-    <div id="phase2">
-        <label>Products</label>
-        <select id="phase2-product">
-            <option value="na">##Under Construction##</option>
-        </select>
-    </div>
-
-    <div id="phase3">Under Construction</div>
-    <div id="phase4">Under Construction</div>
-    <div id="phase5">Under Construction</div>
-
-    </form>
-        
-
         <div id="graybar2"></div>
-
         <div class="contact">
             <ul id="contact">
                 <li>Contact:</li>
@@ -85,5 +133,6 @@
             <p>&copy; 2025 Ryan Moore</p>
         </footer>
     </div>
+    <script src="design.js"></script>
 </body>
 </html>
