@@ -7,10 +7,12 @@ body {
 
 @font-face {
     font-family: 'Satisfontory';
-    src: url("fonts/Satisfontory_v1.5.otf") format('opentype');
+    src: url("../fonts/Satisfontory_v1.5.woff2") format('woff2'),
+        url("../fonts/Satisfontory_v1.5.woff") format('woff'),
+        url("../fonts/Satisfontory_v1.5.ttf") format('truetype'),
+        url("../fonts/Satisfontory_v1.5.otf") format('opentype');
     font-weight: normal;
     font-style: normal;
-
 }
 
 * {
