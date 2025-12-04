@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Satisfactory Designs | Designs</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/designs.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div class="wrapper">
+        <div id="orangebar"></div>
+        <div id="graybar1"></div>
+        <img id="logo" src="images/logo.png" alt="Satisfactory Desgins logo">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="methods.html">Methods</a></li>
+                <li><a href="designs.html" style="color: #FA9549; font-weight: bold;">Designs</a></li>
+                <li><a href="downloads.html">Downloads</a></li>
+            </ul>
+        </nav>
+        <section>
+            <h1>Design Selector</h1>
+            <p>
+                Use this selector by first selecting what Space Elevator phase the product is in and then selecting the product.
+            </p>
+
+            <div class="search">
+                <input id="search-input" type="search" placeholder="Search item (e.g. rotor)" aria-label="Search items" autocomplete="off">
+                <ul id="item-search-suggestions" class="suggestions" role="listbox" aria-label="Search suggestions"></ul>
+            </div>
+
+            <div class="space-elevator-selector">
+                <input type="radio" name="phase" id="phase1" checked>
+                <label for="phase1">Phase 1</label>
+
+                <input type="radio" name="phase" id="phase2">
+                <label for="phase2">Phase 2</label>
+
+                <input type="radio" name="phase" id="phase3">
+                <label for="phase3">Phase 3</label>
+
+                <input type="radio" name="phase" id="phase4">
+                <label for="phase4">Phase 4</label>
+
+                <input type="radio" name="phase" id="phase5">
+                <label for="phase5">Phase 5</label>
+
+                <div class="selector-bg"></div>
+            </div>
+
+            <div class="product-selector-1">
+                <input type="radio" name="product" id="p1" value="iron-plate" checked>
+                <label for="p1">
+                    <img src="icons/iron-plate.png" alt="Iron plate icon">
+                    <span class="label-text">Iron Plate</span>
+                </label>
+
+                <input type="radio" name="product" id="p2" value="iron-rod">
+                <label for="p2">
+                    <img src="icons/iron-rod.png" alt="Iron rod icon">
+                    <span class="label-text">Iron Rod</span>
+                </label>
+
+                <input type="radio" name="product" id="p3" value="screws">
+                <label for="p3">
+                    <img src="icons/screws.png" alt="Screws icon">
+                    <span class="label-text">Screws</span>
+                </label>
+
+                <input type="radio" name="product" id="p4" value="reinforced">
+                <label for="p4">
+                    <img src="icons/reinforced.png" alt="Reinforced iron plate icon">
+                    <span class="label-text">Reinforced Iron Plate</span>
+                </label>
+
+                <input type="radio" name="product" id="p5" value="rotor">
+                <label for="p5">
+                    <img src="icons/rotor.png" alt="Rotor icon">
+                    <span class="label-text">Rotor</span>
+                </label>
+
+                <input type="radio" name="product" id="p6" value="smart-plating">
+                <label for="p6">
+                    <img src="icons/smart-plating.png" alt="Smart plating icon">
+                    <span class="label-text">Smart Plating</span>
+                </label>
+
+                <input type="radio" name="product" id="p7" value="wire">
+                <label for="p7">
+                    <img src="icons/wire.png" alt="Wire icon">
+                    <span class="label-text">Wire</span>
+                </label>
+
+                <input type="radio" name="product" id="p8" value="cable">
+                <label for="p8">
+                    <img src="icons/cable.png" alt="Cable icon">
+                    <span class="label-text">Cable</span>
+                </label>
+
+                <input type="radio" name="product" id="p9" value="concrete">
+                <label for="p9">
+                    <img src="icons/concrete.png" alt="Concrete icon">
+                    <span class="label-text">Concrete</span>
+                </label>
+
+                <div class="vert-selector-bg-1"></div>
+            </div>
+
+            <div class="product-selector-2">
+                <input type="radio" name="product" id="p10" value="steel-beam" checked>
+                <label for="p10">
+                    <img src="icons/steel-beam.png" alt="Steel beam icon">
+                    <span class="label-text">Steel Beam</span>
+                </label>
+
+                <input type="radio" name="product" id="p11" value="steel-pipe">
+                <label for="p11">
+                    <img src="icons/steel-pipe.png" alt="Steel pipe icon">
+                    <span class="label-text">Steel Pipe</span>
+                </label>
+
+                <input type="radio" name="product" id="p12" value="stator">
+                <label for="p12">
+                    <img src="icons/stator.png" alt="Stator icon">
+                    <span class="label-text">Stator</span>
+                </label>
+
+                <input type="radio" name="product" id="p13" value="modular-frame">
+                <label for="p13">
+                    <img src="icons/modular-frame.png" alt="Modular frame icon">
+                    <span class="label-text">Modular Frame</span>
+                </label>
+
+                <input type="radio" name="product" id="p14" value="versatile">
+                <label for="p14">
+                    <img src="icons/versatile.png" alt="Versatile framwork icon">
+                    <span class="label-text">Versatile Framework</span>
+                </label>
+
+                <input type="radio" name="product" id="p15" value="automated-wiring">
+                <label for="p15">
+                    <img src="icons/automated-wiring.png" alt="Automated wiring icon">
+                    <span class="label-text">Automated Wiring</span>
+                </label>
+
+                <div class="vert-selector-bg-2"></div>
+            </div>
+
+            <img src="designs/iron-plate-design.png" alt="Design for selected product." id="design-img" height="500" width="800">
+        </section>
+        
+        <div id="graybar2"></div>
+        <div class="contact">
+            <ul id="contact">
+                <li>Contact:</li>
+                <li>ryan.moore@utahtech.edu</li>
+                <li>rpm7176@gmail.com</li>
+                <li>+1(614)-657-8549</li>
+            </ul>
+
+            <ul id="inspirations">
+                <li>Inspirations:</li>
+                <li><a href="https://satisfactory-calculator.com">https://satisfactory-calculator.com</a></li>
+                <li><a href="https://satisfactorygame.com">https://satisfactorygame.com</a></li>
+                <li><a href="https://satisfactory.wiki.gg">https://satisfactory.wiki.gg</a></li>
+            </ul>
+
+            <form>
+                <textarea id="feedback" name="feedback" rows="5" cols="40" placeholder="Type your feedback here."></textarea>
+                <br>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+
+        <div id="graybar3"></div>
+
+        <footer>
+            <p>&copy; 2025 Ryan Moore</p>
+        </footer>
+    </div>
+    <script src="design.js"></script>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Satisfactory Designs | Methods</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/methods.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div class="wrapper">
+        <div id="orangebar"></div>
+        <div id="graybar1"></div>
+        <img id="logo" src="images/logo.png" alt="Satisfactory Designs logo">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="methods.html" style="color: #FA9549; font-weight: bold;">Methods</a></li>
+                <li><a href="designs.html">Designs</a></li>
+                <li><a href="downloads.html">Downloads</a></li>
+            </ul>
+        </nav>
+
+        <section>
+            <h1>Methods</h1>
+            <p>
+                This page serves as a collection of multiple building techniques and logistical strategies that can be implemented into most <span class="highlight">Satisfactory</span> builds. 
+            </p>
+            <p>
+                Feel free to mix and match these methods to optimize your factories. Also, a tip: if you've been building floors of straight lines of splitters and mergers for what feels like days, you're doing something right.
+            </p>
+            <img src="images/methods.png" alt="Logistics system in Satisfactory" id="methods-img1">
+        </section>
+
+        <img src="images/methods.png" alt="Logistics system in Satisfactory" id="methods-img2">
+
+        
+
+        <aside id="building">
+            <h2>Building</h2>
+            <button id="toggle-building" class="toggle-all">Hide All</button>
+            <div class="dropdown">
+                <input type="checkbox" id="drop-vertint">
+                <label for="drop-vertint" class="dropdown-label">Vertical Integration</label>
+                <div class="dropdown-content">
+                    <p>Vertical integration is a term for the floor structure of a factory, prioritizing verticality over wider floor plans. This reduces a buildings overall footprint and helps pack POIs in closer quarters. It is recommended to designate floors to each product required in a chain assembly to simplify logistics.</p>
+                    <p><span class="highlight">Hint:</span> Conveyor lifts will be incredibly helpful for vertical integration.</p>
+                </div>
+            </div>
+            <div class="dropdown">
+                <input type="checkbox" id="drop-blueprint">
+                <label for="drop-blueprint" class="dropdown-label">Blueprints</label>
+                <div class="dropdown-content">
+                    <p>Blueprints are useful for more than just building large structures. Whether it comes to making connector poles for your train routes, pipe or conveyor manifolds, basic production layouts, blueprints will help you modularize the process.</p>
+                    <p><span class="highlight">Hint:</span> Different stages in the Space Elevator allow for larger blueprint builders.</p>
+                </div>
+            </div>
+
+        </aside>
+
+        <aside id="logistics">
+            <h2>Logistics</h2>
+            <button id="toggle-logistics" class="toggle-all">Hide All</button>
+            <div class="dropdown">
+                <input type="checkbox" id="drop-manifolds">
+                <label for="drop-manifolds" class="dropdown-label">Manifolds</label>
+                <div class="dropdown-content">
+                    <p>Manifolds are logistical systems that distribute items or fluids evenly across multiple outputs. While they may seem counter-intuitive, they preserve power and material usage until in full activity. They are made by creating a straight line of splitters (or mergers for an inverse manifold) connected by high-speed conveyors with lower speed ones on the outputs.</p>
+                    <p><span class="highlight">Hint:</span> Input belts should be twice as fast as output belts.</p>
+                </div>
+            </div>
+            <div class="dropdown">
+                <input type="checkbox" id="drop-conveyors">
+                <label for="drop-conveyors" class="dropdown-label">Conveyor Setups</label>
+                <div class="dropdown-content">
+                    <p>Conveyors are the primary method of item transportation in <span class="highlight">Satisfactory</span>. Ideally, the conveyor exiting your raw material extractor should match its extraction rate. For splitters, depending on the system, usually an input rate ~double the output rate is desirable. When setting up long distance conveyors, or using multiple lines at once, it's recommended to use conveyor poles, since they allow for clean stacks of conveyor belts.</p>
+                    <p><span class="highlight">Hint:</span> The <span class="italic">Straight</span> build mode is best for in-factory belts and the <span class="italic">Curved</span> build mode is best for inter-factory belts.</p>
+                </div>
+            </div>
+        </aside>
+    
+        <div id="graybar2"></div>
+
+        <div class="contact">
+            <ul id="contact">
+                <li>Contact:</li>
+                <li>ryan.moore@utahtech.edu</li>
+                <li>rpm7176@gmail.com</li>
+                <li>+1(614)-657-8549</li>
+            </ul>
+
+            <ul id="inspirations">
+                <li>Inspirations:</li>
+                <li><a href="https://satisfactory-calculator.com">https://satisfactory-calculator.com</a></li>
+                <li><a href="https://satisfactorygame.com">https://satisfactorygame.com</a></li>
+                <li><a href="https://satisfactory.wiki.gg">https://satisfactory.wiki.gg</a></li>
+            </ul>
+
+            <form>
+                <textarea id="feedback" name="feedback" rows="5" cols="40" placeholder="Type your feedback here."></textarea>
+                <br>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+
+        <div id="graybar3"></div>
+
+        <footer>
+            <p>&copy; 2025 Ryan Moore</p>
+        </footer>
+    </div>
+    <script>
+        window.addEventListener("DOMContentLoaded", () => {
+            function setupToggle(asideSelector, buttonSelector) {
+                const aside = document.querySelector(asideSelector);
+                const checkboxes = aside.querySelectorAll(".dropdown input[type='checkbox']");
+                const button = document.getElementById(buttonSelector);
+
+                checkboxes.forEach(cb => cb.checked = true);
+                button.addEventListener("click", () => {
+                    const allOpen = [...checkboxes].every(cb => cb.checked);
+                    if(allOpen) {
+                        checkboxes.forEach(cb => cb.checked = false);
+                        button.textContent = "Show All";
+                    } else {
+                        checkboxes.forEach(cb => cb.checked = true);
+                        button.textContent = "Hide All";
+                    }
+                });
+            };
+            setupToggle("#building", "toggle-building");
+            setupToggle("#logistics", "toggle-logistics");
+        });
+    </script>
+</body>
+</html>
